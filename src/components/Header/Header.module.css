@@ -1,0 +1,37 @@
+.header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 115px;
+    margin: 0 auto;
+    padding: 32px clamp(24px, 4.5vw, 64px);
+}
+
+/* Homepage: фон как у hero (#010101), без отдельной «чёрной полосы» */
+.home_page {
+    background-color: #010101;
+    color: var(--color-white);
+}
+
+.all_pages {
+    background-color: var(--color-bg-gray);
+    color: var(--color-ink);
+}
+
+@media (max-width: 900px) {
+    .header_inner {
+        min-height: auto;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}

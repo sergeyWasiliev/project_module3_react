@@ -1,0 +1,187 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dates_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.date_field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 304px;
+  max-width: 100%;
+  height: 53px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.date_field:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.calendar_icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 24px;
+  color: var(--color-ink-strong);
+  pointer-events: none;
+}
+
+.date_value {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-ink-strong);
+}
+
+.date_placeholder {
+  color: var(--color-placeholder);
+}
+
+.popover {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 50;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: max-content;
+  min-width: 576px;
+  max-width: min(576px, calc(100vw - 32px));
+  padding: 24px 32px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  color: var(--color-ink-strong);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.picker_footer {
+  display: flex;
+  flex-shrink: 0;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.reset_btn,
+.apply_btn {
+  box-sizing: border-box;
+  min-width: 80px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.reset_btn {
+  background: transparent;
+  color: rgba(1, 4, 0, 0.5);
+}
+
+.reset_btn:hover {
+  color: var(--color-ink-strong);
+}
+
+.apply_btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.apply_btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Сброс наследования color: white от .tickets_form (className на .rdp-root) */
+.day_picker {
+  --rdp-accent-color: var(--color-primary);
+  --rdp-accent-background-color: rgba(93, 80, 230, 0.15);
+  --rdp-day-height: 32px;
+  --rdp-day-width: 32px;
+  --rdp-day_button-height: 32px;
+  --rdp-day_button-width: 32px;
+  --rdp-day_button-border-radius: 100px;
+  --rdp-months-gap: 32px;
+  --rdp-outside-opacity: 0.45;
+  --rdp-weekday-opacity: 1;
+  color: var(--color-ink-strong);
+  font-family: 'Poppins', sans-serif;
+}
+
+.day_picker :global(.rdp-months) {
+  flex-wrap: nowrap;
+}
+
+.day_picker :global(.rdp-month) {
+  flex: 0 0 auto;
+}
+
+.day_picker :global(.rdp-day_button) {
+  font-size: 12px;
+  color: var(--color-ink-strong);
+}
+
+.day_picker :global(.rdp-day_button:disabled) {
+  color: var(--color-placeholder);
+  opacity: 1;
+}
+
+.day_picker :global(.rdp-weekday) {
+  font-size: 12px;
+  color: rgba(1, 4, 0, 0.5);
+  opacity: 1;
+}
+
+.day_picker :global(.rdp-caption_label) {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-ink-strong);
+}
+
+.day_picker :global(.rdp-button_next),
+.day_picker :global(.rdp-button_previous) {
+  color: var(--color-primary);
+}
+
+@media (max-width: 720px) {
+  .popover {
+    left: 0;
+    transform: none;
+    min-width: 0;
+    width: calc(100vw - 48px);
+    max-width: calc(100vw - 48px);
+    overflow-x: auto;
+    padding: 16px;
+  }
+
+  .day_picker :global(.rdp-months) {
+    flex-wrap: wrap;
+  }
+
+  .date_field {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Внутренние страницы: фон BG Gray (Figma Trains List / Search Results) */
+.content_light {
+  flex: 1;
+  background-color: var(--color-bg-gray);
+  color: var(--color-ink);
+}
