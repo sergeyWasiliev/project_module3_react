@@ -1,4 +1,4 @@
-const indianRailwayStations =
+export const indianRailwayStations =
     [
         {name: "New Delhi", code: "NDLS"},
         {name: "Mumbai Central", code: "BCT"},
