@@ -8,14 +8,16 @@ interface Props {
     page: HeaderPage
 }
 
-export default function Header({ page }: Props) {
+export default function Header({page}: Props) {
     const isHome = page === 'home_page'
 
     return (
-        <header className={`${s.header} ${isHome ? s.home_page : s.all_pages}`}>
+        <header className={`${s.header} ${isHome ? s.home_page : s.all_pages}`}
+             // className={[s.header, isHome ? s.home_page : s.all_pages].join(' ')}
+        >
             <div className={s.header_inner}>
-                <Logo page={page} />
-                <NavMenu />
+                <Logo page={page}/>
+                <NavMenu/>
             </div>
         </header>
     )

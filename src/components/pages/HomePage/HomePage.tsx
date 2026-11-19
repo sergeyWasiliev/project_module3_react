@@ -6,10 +6,10 @@ export default function HomePage() {
     <main className={s.home}>
       <div className={s.hero}>
         <div className={s.hero_text}>
-          <h1 className={s.title}>Let&apos;s Find That Ticket</h1>
+          <h1 className={s.title}>Let's Find That Ticket</h1>
           <p className={s.subtitle}>Before Someone Else Does</p>
         </div>
-        <TicketsSearchForm />
+        <TicketsSearchForm page='home_page'/>
       </div>
     </main>
   )

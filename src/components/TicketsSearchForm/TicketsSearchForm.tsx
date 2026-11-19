@@ -3,8 +3,13 @@ import DateRangePicker from '../DateRangePicker/DateRangePicker.tsx'
 import PersonIcon from './icons/PersonIcon.tsx'
 import s from './TicketsSearchForm.module.css'
 import {useNavigate} from "react-router-dom";
+import type { HeaderPage } from '../Header/Header.tsx'
 
-export default function TicketsSearchForm() {
+interface Props {
+    page: HeaderPage
+}
+
+export default function TicketsSearchForm({ page }: Props) {
     const tripRoundId = useId()
     const tripOneWayId = useId()
     const [passengers, setPassengers] = useState(1)
@@ -18,8 +23,10 @@ export default function TicketsSearchForm() {
     }
 
     return (
-        <form className={s.tickets_form}
-              onSubmit={handleSubmit}>
+        <form
+            className={`${s.tickets_form} ${s[page]}`}
+            onSubmit={handleSubmit}
+        >
             <div className={s.trip_row}>
                 <div className={s.trip_type}>
                     <label className={s.radio_label} htmlFor={tripRoundId}>
