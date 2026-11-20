@@ -1,0 +1,10 @@
+/* Figma 271:1237 — 3×160 + 2×56 = 592px внутри карточки */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+}

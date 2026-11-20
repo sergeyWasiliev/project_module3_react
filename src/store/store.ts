@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-
+import trainsSearchResultsReducer from './slices/searchResultsSlice'
 
 export const store = configureStore({
     reducer: {
+        trainsSearchResults: trainsSearchResultsReducer
 
     }
 })

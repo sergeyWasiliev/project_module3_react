@@ -1,0 +1,7 @@
+/* Figma 271:1219 — список карточек, gap 32px между поездами */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}

@@ -7,17 +7,44 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 32px clamp(24px, 4.5vw, 64px);
+  padding: 32px clamp(24px, 4.5vw, 64px) 128px;
+}
+
+.search_section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  max-width: 640px;
 }
 
 /* Figma 271:1204 — Search Results */
 .title {
   margin: 0;
   width: 100%;
-  max-width: 640px;
   font-size: 32px;
   font-weight: 400;
   line-height: normal;
   text-align: left;
   color: var(--color-primary);
+}
+
+/* Figma 271:1217 — Available Trains */
+.trains_section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* Figma 271:1337 — заголовок в блоке Text (76px), отступ сверху 16px */
+.trains_title {
+  margin: 0;
+  padding-top: 16px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+  color: var(--color-ink-strong);
 }
