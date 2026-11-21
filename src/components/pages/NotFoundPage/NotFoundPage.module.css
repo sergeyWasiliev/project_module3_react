@@ -1,0 +1,154 @@
+.page {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px clamp(24px, 4.5vw, 64px) 128px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.messageBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  max-width: 507px;
+}
+
+.heroBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: 493px;
+}
+
+.errorCodeRow {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 225px;
+}
+
+.errorCodeDigit {
+  flex: 0 0 auto;
+  font-size: 225px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-ink-70);
+}
+
+.ghostIllustration {
+  display: block;
+  flex-shrink: 0;
+  width: 160px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.heading {
+  margin: 0;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-ink-70);
+}
+
+.lead {
+  margin: 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: center;
+  color: var(--color-ink-50);
+}
+
+.homeLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 200px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.homeLink:hover {
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: 32px;
+  }
+
+  .content {
+    gap: 52px;
+  }
+
+  .messageBlock {
+    max-width: 304px;
+    gap: 17px;
+  }
+
+  .heroBlock {
+    max-width: 296px;
+    gap: 32px;
+  }
+
+  .errorCodeRow {
+    min-height: 150px;
+    gap: 12px;
+  }
+
+  .errorCodeDigit {
+    font-size: 150px;
+  }
+
+  .ghostIllustration {
+    width: 120px;
+    height: 150px;
+  }
+
+  .heading {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+
+  .homeLink {
+    width: 144px;
+    height: 45px;
+    font-size: 14px;
+  }
+}

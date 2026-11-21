@@ -2,6 +2,8 @@
   /* Figma Homepage + accents из public/icons.svg */
   --color-ink: #08060d;
   --color-ink-strong: #010400;
+  --color-ink-70: rgba(1, 4, 0, 0.7);
+  --color-ink-50: rgba(1, 4, 0, 0.5);
   --color-accent: #aa3bff;
   --color-primary: #5d50e6;
   --color-white: #ffffff;
