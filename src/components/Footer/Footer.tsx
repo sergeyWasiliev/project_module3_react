@@ -28,9 +28,18 @@ const ABOUT_LINKS = [
   'Bussiness Relation',
 ] as const
 
-const COMMUNITY_LINKS = ['Events', 'Blog', 'Podcast', 'Invite a friend'] as const
+const COMMUNITY_LINKS = [
+  'Events',
+  'Blog',
+  'Podcast',
+  'Invite a friend'
+] as const
 
-const SOCIAL_LINKS = ['Discord', 'Instagram', 'Twitter', 'Facebook'] as const
+const SOCIAL_LINKS = [
+  'Discord',
+  'Instagram',
+  'Twitter',
+  'Facebook'] as const
 
 export default function Footer() {
   return (

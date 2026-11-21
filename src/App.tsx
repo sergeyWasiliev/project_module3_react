@@ -13,6 +13,7 @@ import Footer from './components/Footer/Footer.tsx'
 export default function App() {
     const location = useLocation()
     const isHome = location.pathname === '/'
+    const isFooter = ['/search-results', '/review-booking', '/review'].includes(location.pathname)
 
     const headerPage: HeaderPage = isHome ? 'home_page' : 'all_pages'
 
@@ -28,7 +29,7 @@ export default function App() {
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </div>
-            {!isHome && <Footer />}
+            {isFooter && <Footer />}
         </div>
     )
 }
