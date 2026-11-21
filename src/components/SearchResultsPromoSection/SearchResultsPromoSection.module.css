@@ -1,0 +1,25 @@
+/* Figma 271:1208 — Frame 2916 */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.banners {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Figma 271:1216 */
+.disclaimer {
+  margin: 0;
+  max-width: 610px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  color: rgba(1, 4, 0, 0.5);
+}

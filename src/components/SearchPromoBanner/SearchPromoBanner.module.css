@@ -1,0 +1,48 @@
+/* Figma 271:1210 / 271:1213 — promo banners */
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+  color: var(--color-white);
+}
+
+.chevron {
+  position: relative;
+  flex-shrink: 0;
+  width: 8.24px;
+  height: 10px;
+}
