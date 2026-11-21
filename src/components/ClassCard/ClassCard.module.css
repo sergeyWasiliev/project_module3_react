@@ -1,7 +1,6 @@
 /* Figma 271:1238 — блок класса (160×92) */
 .card {
   display: flex;
-  flex: 0 0 160px;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
