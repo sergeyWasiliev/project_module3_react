@@ -46,7 +46,7 @@ export default function TrainCard({
         </div>
       </div>
 
-      <ClassCardsContainer classes={classes} />
+      <ClassCardsContainer train_id={id} classes={classes} />
     </article>
   )
 }

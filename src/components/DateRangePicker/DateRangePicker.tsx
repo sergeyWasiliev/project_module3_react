@@ -50,6 +50,20 @@ export default function DateRangePicker({
     }
   }, [isRoundTrip])
 
+  useEffect(() => {
+    if (!open) return
+
+    function handlePointerDown(event: MouseEvent) {
+      const root = wrapperRef.current
+      if (!root?.contains(event.target as Node)) {
+        setOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handlePointerDown)
+    return () => document.removeEventListener('mousedown', handlePointerDown)
+  }, [open])
+
   const openPicker = () => {
     setDraftRange(range)
     setDraftSingle(singleDate)

@@ -13,7 +13,9 @@ import Footer from './components/Footer/Footer.tsx'
 export default function App() {
     const location = useLocation()
     const isHome = location.pathname === '/'
-    const isFooter = ['/search-results', '/review-booking', '/review'].includes(location.pathname)
+    const isFooter =
+        location.pathname === '/search-results' ||
+        location.pathname.startsWith('/review-booking')
 
     const headerPage: HeaderPage = isHome ? 'home_page' : 'all_pages'
 
@@ -24,8 +26,7 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/search-results" element={<SearchResultsPage />} />
-                    <Route path="/review-booking" element={<ReviewBookingPage />} />
-                    <Route path="/review" element={<ReviewBookingPage />} />
+                    <Route path="/review-booking/:train_id/:class_code" element={<ReviewBookingPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </div>
